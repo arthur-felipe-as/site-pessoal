@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="fixed relative bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+      <div class="relative flex h-16 items-center justify-between">
+
+      
+      <p class="font-mono text-xl">
+        Arthur Felipe
+      </p>
+      <div >
+        <button id="dark-mode-btn"
+        class="relative inline-flex items-center justify-center rounded-md p-2 text-black-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+          <img 
+          src="./assets/dark-mode.png"
+          class="size-10"
+          />
+
+        </button>
+        <button class="relative inline-flex items-center justify-center rounded-md p-2 text-black-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+          <img
+          src="./assets/sidebar-4.png"
+          class="size-10"
+          /> 
+        </button>
+        </div>  
+      </div>
+    </nav>
+
+    <aside id="sidebar">
+      <!-- Sidebar content -->
+    </aside>
+
+    <main>
+      <section id="hero" class="bg-background">
+        <div class="hero min-h-screen p-30">
+          <div class="flex flex-col justify-center items-center h-75 ">
+            
+              <img
+                src="./assets/perfil-github.jpeg"
+                class="max-w-70 rounded-full"
+              />
+
+              <div class="text-foreground" >
+                Sou um aluno de Ciência da Computação
+              </div>
+              
+
+          </div>
+
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="flex flex-row justify-center items-center">        
+        <script type="module">
+          import { generateCards } from "./js/projects";
+          generateCards();
+        </script>
+      </div>  
+    </section>
+
+      <section id="contact">
+        <!-- Contact section -->
+      </section>
+    </main>
+
+    <footer>
+      <!-- Footer content -->
+    </footer>
+
+    <script type="module" src="js/darkMode.js"></script>
+    <script type="module" src="js/sidebar.js"></script>
+    <script type="module" src="js/projects.js"></script>
+  </body>
+</html>
